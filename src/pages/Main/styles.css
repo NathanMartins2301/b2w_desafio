@@ -1,0 +1,21 @@
+#main-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container .box {
+    
+}
+
+#main-container .box header {
+    background-color: blueviolet;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+#main-container .box .info {
+    padding: 10px 20px; 
+}
+
