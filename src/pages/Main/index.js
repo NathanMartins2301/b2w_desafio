@@ -17,6 +17,10 @@ export default class Main extends Component {
        }
    }
 
+   next(){
+       this.componentDidMount();
+   }
+
     async componentDidMount(){
         const randon = Math.floor(Math.random() * (61 - 1)) +1;
         const response = await api.get('/' + randon);
@@ -32,6 +36,9 @@ export default class Main extends Component {
   render() {
     return (
         <div id="main-container">
+            <div className="box-title">
+                <h1>Hora do Desafio</h1>
+            </div>            
             <div className="box">
                 <header>Nome: {this.state.planet.name}</header>
                 <div className="info">Population: {this.state.planet.population}</div>
@@ -39,6 +46,7 @@ export default class Main extends Component {
                 <div className="info">Terrain: {this.state.planet.terrain}</div>
                 <div className="info">Featured in nFilms: {this.state.qtd_films}</div>
             </div>
+            <button class="next" onClick={()=> this.next()}>Next</button>
         </div>
     );
   }
